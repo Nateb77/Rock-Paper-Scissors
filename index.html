@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Rock, Paper, Scissors  </h1>
+    <p>To play Rock Paper Scissors on this website, select one of the three options—rock, paper, or scissors—by clicking the corresponding button or icon. Once you make your choice, the computer will automatically generate its own selection. The winner is determined by the standard rules: rock beats scissors, scissors beats paper, and paper beats rock. The result will be displayed on the screen, along with updated scores if scoring is enabled. You can continue playing multiple rounds by making a new selection each time.</p>
     <div class="row">
           <div class="col">
     <img src="paper.png" alt="Description of the image">
@@ -32,10 +33,11 @@
         </div>
     </div>
     <div id="result"></div>
+                <button id="reset" onclick="resetGame()">Play Again</button>
+
     <script src="script.js"></script>
     <div id="final-result"></div>
-    <div id="play-again" style="display: none;">
-        <button onclick="resetGame()">Play Again</button>
+    <div id="play-again"></div>
         <div id="final-score"></div>
     </div>
     <div class="bottom-section">
