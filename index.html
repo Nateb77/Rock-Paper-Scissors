@@ -26,20 +26,22 @@
 
     <main class="game-container">
 
-        <!-- Choices -->
+        <!-- Choices (UPDATED: images are buttons now) -->
         <div class="choices">
-            <div class="choice">
+            <button class="choice" onclick="play('rock')">
                 <img src="rock.webp" alt="Rock">
-                <button onclick="play('rock')">Rock</button>
-            </div>
-            <div class="choice">
+                <span>Rock</span>
+            </button>
+
+            <button class="choice" onclick="play('paper')">
                 <img src="paper.png" alt="Paper">
-                <button onclick="play('paper')">Paper</button>
-            </div>
-            <div class="choice">
+                <span>Paper</span>
+            </button>
+
+            <button class="choice" onclick="play('scissors')">
                 <img src="scissors.png" alt="Scissors">
-                <button onclick="play('scissors')">Scissors</button>
-            </div>
+                <span>Scissors</span>
+            </button>
         </div>
 
         <!-- Result -->
