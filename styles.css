@@ -1,58 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    min-height: 100%;
-    background-image: url(hilarious-rock-paper-scissors-b700vm7azrzpu4pd.jpg);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('hilarious-rock-paper-scissors-b700vm7azrzpu4pd.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-h1 {
+/* HEADER */
+header {
     text-align: center;
-    margin: 20px 0;
+    padding: 20px;
 }
 
-.container {
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+header button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* GAME AREA */
+.game-container {
     flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 30px;
+    padding: 20px;
 }
 
-.row {
+/* CHOICES */
+.choices {
     display: flex;
+    gap: 30px;
 }
 
-.col {
-    flex: 1;
-}
-
-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.bottom-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.you-row, .computer-row, .score-row {
+.choice {
     text-align: center;
 }
 
+.choice img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.choice img:hover {
+    transform: scale(1.1);
+}
+
+.choice button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* RESULT BOX */
+.result-box {
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#reset {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* SCOREBOARD */
+.scoreboard {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.player, .computer {
+    text-align: center;
+}
+
+.player img, .computer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* MODAL */
 dialog {
-  border: none;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+    max-width: 350px;
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
 }

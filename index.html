@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Scissors</title>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Rock, Paper, Scissors  </h1>
+
+    <header>
+        <h1>🎮 Rock, Paper, Scissors</h1>
+    </header>
 
     <dialog id="myModal">
-    <h2>Hello!</h2>
-    <p>To play Rock Paper Scissors on this website, select one of the three options—rock, paper, or scissors—by clicking the corresponding button or icon. Once you make your choice, the computer will automatically generate its own selection. The winner is determined by the standard rules: rock beats scissors, scissors beats paper, and paper beats rock. The result will be displayed on the screen, along with updated scores if scoring is enabled. You can continue playing multiple rounds by making a new selection each time.</p>    <button id="closeModal">Close</button>
+        <h2>How to Play</h2>
+        <p>
+            Choose rock, paper, or scissors. The computer picks randomly.
+            <br><br>
+            ✔ Rock beats Scissors  
+            ✔ Scissors beats Paper  
+            ✔ Paper beats Rock  
+        </p>
+        <button id="closeModal">Got it!</button>
     </dialog>
-    <div class="row">
-          <div class="col">
-    <img src="paper.png" alt="Description of the image">
-          </div>
-          <div class="col">
-                <img src="rock.webp" alt="Description of the image">
-            </div>
-            <div class="col">
-    <img src="scissors.png" alt="Description of the image">
-            </div>
-    </div>
 
-    <div class="row">
-        <div class="col">
-            <button id="paper" onclick="play('paper')">Paper</button>
+    <main class="game-container">
+
+        <!-- Choices -->
+        <div class="choices">
+            <div class="choice">
+                <img src="rock.webp" alt="Rock">
+                <button onclick="play('rock')">Rock</button>
+            </div>
+            <div class="choice">
+                <img src="paper.png" alt="Paper">
+                <button onclick="play('paper')">Paper</button>
+            </div>
+            <div class="choice">
+                <img src="scissors.png" alt="Scissors">
+                <button onclick="play('scissors')">Scissors</button>
+            </div>
         </div>
-        <div class="col">
-            <button id="rock" onclick="play('rock')">Rock</button>
+
+        <!-- Result -->
+        <div class="result-box">
+            <h2 id="result">Make your move!</h2>
+            <p id="round-info"></p>
+            <button id="reset" onclick="resetGame()">Play Again</button>
         </div>
-        <div class="col">
-            <button id="scissors" onclick="play('scissors')">Scissors</button>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <div class="player">
+                <img src="sigma.jpg" alt="Player">
+                <h3>You</h3>
+                <p id="you-choice"></p>
+            </div>
+
+            <div class="score" id="score">
+                Player: 0 | Computer: 0
+            </div>
+
+            <div class="computer">
+                <img src="termnator.jpg" alt="Computer">
+                <h3>Computer</h3>
+                <p id="computer-choice"></p>
+            </div>
         </div>
-    </div>
-    <div class="col">
-        <h3>Your Choice</h3>
-    </div>
-    <div class="col">
-        <h3>Computer's Choice</h3>
-    </div>
-    <div class="col">
-        <h2>Result:</h2>
-    </div>
-    <div id="result"></div>
-                <button id="reset" onclick="resetGame()">Play Again</button>
-    
+
+    </main>
+
     <script src="script.js"></script>
-    <div id="final-result"></div>
-    <div id="play-again"></div>
-        <div id="final-score"></div>
-    </div>
-    <div class="bottom-section">
-        <div class="you-row">
-            <img src="sigma.jpg" alt="YOU">
-            <h3>YOU</h3>
-            <span id="you-choice"></span>
-        </div>
-            <div id="score">Player: 0 | Computer: 0</div>
-
-        <div class="computer-row">
-            <img src="termnator.jpg" alt="COMPUTER">
-            <h3>COMPUTER</h3>
-            <span id="computer-choice"></span>
-        </div>
-        
-    </div>
 </body>
 </html>
