@@ -11,8 +11,8 @@ document.getElementById("closeModal").onclick = function () {
 
 function play(playerChoice) {
     const choices = ["rock", "paper", "scissors"];
-    const computerChoice =
-        choices[Math.floor(Math.random() * 3)];
+    const getcomputerChoice =
+        choices[Math.floor(Math.random() * choices.length)];
 
     document.getElementById("you-choice").textContent =
         "You chose: " + playerChoice;
@@ -20,6 +20,8 @@ function play(playerChoice) {
         "Computer chose: " + computerChoice;
 
     let result = "";
+}
+function determineWinner(playerChoice, computerChoice) {
 
     if (playerChoice === computerChoice) {
         result = "It's a tie!";
@@ -33,8 +35,10 @@ function play(playerChoice) {
     } else {
         result = "Computer wins!";
         computerScore++;
-    }
 
+    }
+}
+function updateScore(playerChoice, computerChoice) {
     document.getElementById("result").textContent = result;
 
     document.getElementById("score").textContent =
@@ -45,7 +49,7 @@ function play(playerChoice) {
         playerChoice + " vs " + computerChoice;
 }
 
-function resetGame() {
+function reset() {
     playerScore = 0;
     computerScore = 0;
 
