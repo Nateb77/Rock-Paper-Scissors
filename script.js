@@ -14,9 +14,9 @@ function play(playerChoice) {
     const getcomputerChoice =
         choices[Math.floor(Math.random() * choices.length)];
 
-    document.getElementById("you-choice").textContent =
+    document.getElementById("you-choice").addEventListener =
         "You chose: " + playerChoice;
-    document.getElementById("computer-choice").textContent =
+    document.getElementById("computer-choice").addEventListener =
         "Computer chose: " + computerChoice;
 
     let result = "";
@@ -39,9 +39,9 @@ function determineWinner(playerChoice, computerChoice) {
     }
 }
 function updateScore(playerChoice, computerChoice) {
-    document.getElementById("result").textContent = result;
+    document.getElementById("result").addEventListener = result;
 
-    document.getElementById("score").textContent =
+    document.getElementById("score").addEventListener =
         "Player:" + playerScore +
         "Computer: " + computerScore;
 
@@ -53,12 +53,12 @@ function reset() {
     playerScore = 0;
     computerScore = 0;
 
-    document.getElementById("result").textContent =
+    document.getElementById("result").addEventListener =
         "Make your move!";
-    document.getElementById("round-info").textContent = "";
-    document.getElementById("you-choice").textContent = "";
-    document.getElementById("computer-choice").textContent = "";
-    document.getElementById("score").textContent =
+    document.getElementById("round-info").addEventListener = "";
+    document.getElementById("you-choice").addEventListener = "";
+    document.getElementById("computer-choice").addEventListener = "";
+    document.getElementById("score").addEventListener =
         "Player: 0 | Computer: 0";
 }
 
